@@ -1,0 +1,30 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 15, in script
+    scene landscape_1 meadow
+Exception: Image 'landscape_1' does not accept attributes 'meadow'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 15, in script
+    scene landscape_1 meadow
+  File "renpy/ast.py", line 1542, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "renpy/ast.py", line 1378, in show_imspec
+    atl=atl)
+  File "renpy/exports.py", line 686, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "renpy/display/image.py", line 414, in find_target
+    self.target = target._duplicate(a)
+  File "renpy/display/core.py", line 397, in _duplicate
+    args.extraneous()
+  File "renpy/display/core.py", line 267, in extraneous
+    " ".join(self.args),
+Exception: Image 'landscape_1' does not accept attributes 'meadow'.
+
+Windows-10-10.0.19041 AMD64
+Ren'Py 7.5.3.22090809
+Witcher Graphic Novel 1.0
+Sun Oct  2 19:07:52 2022
